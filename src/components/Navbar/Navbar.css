@@ -54,15 +54,6 @@
 }
 
 
-
-.user-icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-
-
 .dropdown-menu {
     position: absolute;
     top: 40px;
@@ -91,4 +82,26 @@
 
 .dropdown-menu button:hover {
     background-color: #f0f0f0;
+}
+
+
+
+/* Styling the icon: radio icon & user icon */
+.navbar-menu .icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Radio icon */
+.navbar-menu .radio-icon {
+    margin-left: 10px;
+}
+
+
+/* Style the user icon */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
