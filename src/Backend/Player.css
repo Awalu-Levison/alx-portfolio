@@ -1,0 +1,37 @@
+.songs-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    }
+
+.songs-controls {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+}
+        
+        
+        
+.player {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+}
+
+.songs-search {
+            margin-bottom: 20px;
+            padding: 5px;
+            width: 350px;
+            border-radius: 40px;
+}
+            
+            
+            
+.song-list {
+            list-style: none;
+            padding: 0;
+            border-radius: 40px;
+}
