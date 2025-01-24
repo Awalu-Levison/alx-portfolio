@@ -39,22 +39,32 @@ const Navbar = ({ setShowLogin }) => {
           <Link to='/' onClick={() => setNavlist("home")} className={navlist === "home" ? "active" : ""}>Home</Link>
           <a href='#explore_set' onClick={() => setNavlist("explore")} className={navlist === "explore" ? "active" : ""}>Explore</a>
           <a href='#about_set' onClick={() => setNavlist("contact-us")} className={navlist === "contact-us" ? "active" : ""}>About Us</a>
+          
           {isLoggedIn && (
-          <Link to='/player' onClick={() => setNavlist("player")} className={navlist === "contact-us" ? "active" : ""} ><img src={assets.radio} alt="radio" /></Link> )}
-
-
-
-          <div className='navbar-right'>
-            {isLoggedIn ? (<div className='user-menu'>
-              <img src={assets.user_icon} alt='User' onClick={toggleDropdown} className='user-icon' />
-              {dropdownOpen && (<div className='dropdown-menu'><button onClick={handleLogout}>Logout</button></div>)}</div>
+            <Link to='/player' onClick={() => setNavlist("player")} className={navlist === "player" ? "active" : ""}>
+              <img src={assets.radio} alt="radio" className="icon radio-icon" />
+            </Link>
+          )}
+  
+          <div className="user-menu">
+            {isLoggedIn ? (
+              <div>
+                <img src={assets.user_icon} alt='User' onClick={toggleDropdown} className="icon user-icon" />
+                {dropdownOpen && (
+                  <div className='dropdown-menu'>
+                    <button onClick={handleLogout}>Logout</button>
+                  </div>
+                )}
+              </div>
             ) : (
-              <button onClick={() => setShowLogin(true)}>Login</button>)}
+              <button onClick={() => setShowLogin(true)}>Login</button>
+            )}
           </div>
         </ul>
       </div>
     </div>
-  )
+  );
+  
 }
 
 export default Navbar
