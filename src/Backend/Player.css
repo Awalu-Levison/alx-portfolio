@@ -1,37 +1,233 @@
-.songs-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    }
-
-.songs-controls {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-        border-radius: 15px;
+/* General container styles */
+.player-container {
+    font-family: 'Poppins';
+    padding: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: #071f4b;
+    box-shadow: #ff9900;
+    animation: fade-in 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    /* Box shadow */
+    -webkit-box-shadow: -3px -2px 24px 2px rgba(0,0,0,1);
+    -moz-box-shadow: -3px -2px 24px 2px rgba(0,0,0,1);
+    box-shadow: -3px -2px 24px 2px rgba(0,0,0,1);
+  
 }
-        
-        
-        
+
+
+
+/* Welcome heading */
+.welcome {
+    font-size: 48px;
+    text-shadow: 2px 0px 2px #ff9900;
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Player container */
 .player {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.songs-search {
-            margin-bottom: 20px;
-            padding: 5px;
-            width: 350px;
-            border-radius: 40px;
+
+/* Song info */
+.song-info h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #ff9900;
+
+    /*color: #333;*/
+
 }
-            
-            
-            
+
+.song-info p {
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    /*color: #666;*/
+
+}
+
+/* Controls */
+.song-controls {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+.song-controls button {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    gap: 20px;
+}
+
+
+
+
+/* Invert colours */
+.song-controls img {
+    filter: invert(1); /* Invert colors to make black icons white */
+}
+
+.song-controls button:hover {
+    background-color: #ff9900;
+    transform: scale(0.8);
+}
+
+.song-controls img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/* Main song cover */
+.song-cover img {
+    display: flex;
+    justify-content: right;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Search bar */
+.songs-search {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    /*border: 2px solid #ff9900;*/
+    border-radius: 20px;
+    margin-top: 10px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+
+
+.songs-search:focus {
+    box-shadow: 0px 0px 10px rgba(255, 153, 0, 0.5);
+}
+
+/* Song list */
 .song-list {
-            list-style: none;
-            padding: 0;
-            border-radius: 40px;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+
+
+.song-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    /*border-bottom: 1px solid #eee;*/
+    border-bottom: 2px solid #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+/* Music hover colour */
+.song-list li:hover {
+    /*background-color: #e7e7e7;*/
+    background-color: #534d4d;
+
+}
+
+
+
+.song-title {
+    font-weight: bold;
+    color: #ff9900;
+    /*color: #333;*/
+
+}
+
+.song-details {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+/* Active song */
+.active-song {
+    color: #000000;
+    background-color: #999999;
+    border-radius: 10px;
+    /*background-color: #999999;
+    color: #000000;
+
+    */
+
+}
+
+/* Playlist container */
+.playlists-container {
+    margin-top: 20px;
+}
+
+
+.playlists-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    /* 
+    border: 2px solid #ddd;
+    */
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.playlists-container button {
+    padding: 5px 15px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.playlists-container button:hover {
+    background-color: #000000;
+    /*ackground-color: #e68a00;*/
+
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
