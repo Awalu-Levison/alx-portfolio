@@ -54,14 +54,24 @@ const Player = () => {
             alert('Enter playlist name first!');
             return;
         }
+        if (playlists[playlistName]) {
+            alert('Playlist with this name already exists!');
+            return;
+        }
         setPlaylists({ ...playlists, [playlistName]: [] });
         setPlaylistName('');
     };
 
     const addToPlaylist = (song, playlistName) => {
+        if (!playlistName) {
+            alert('Please select a playlist first!');
+            return;
+        }
         setPlaylists((prev) => ({
             ...prev,
-            [playlistName]: [...prev[playlistName], song],
+            [playlistName]: prev[playlistName].some((s) => s.title === song.title)
+                ? prev[playlistName]
+                : [...prev[playlistName], song],
         }));
     };
 
@@ -78,8 +88,6 @@ const Player = () => {
             <h1 className="welcome">Welcome to Foxplayer!</h1>
 
             <div className="player">
-
-                {/* Song information */}
                 <div className="song-info">
                     <h2>{shuffledSongs[currentSongIndex].title}</h2>
                     <p>
@@ -87,31 +95,28 @@ const Player = () => {
                     </p>
                     <audio ref={audioPlayer} controls></audio>
 
-                    {/* Music control buttons */}
                     <div className="song-controls">
-                    <button onClick={() => changeSong(-1)}>
-                        <img src={assets.bac} alt="Previous" />
-                    </button>
-                    <button onClick={togglePlayPause}>
-                        {isPlaying ? <img src={assets.pause2} alt="Pause" /> : <img src={assets.play2} alt="Play" />}
-                    </button>
-                    <button onClick={() => changeSong(1)}>
-                        <img src={assets.nn} alt="Next" />
-                    </button>
-                    <button
-                        onClick={() => {
-                            const shuffled = shuffleSongs(songs);
-                            setShuffledSongs(shuffled);
-                            setCurrentSongIndex(0);
-                        }}
-                    >
-                        <img src={assets.shuffle2} alt="Shuffle" />
-                    </button>
+                        <button onClick={() => changeSong(-1)}>
+                            <img src={assets.bac} alt="Previous" />
+                        </button>
+                        <button onClick={togglePlayPause}>
+                            {isPlaying ? <img src={assets.pause2} alt="Pause" /> : <img src={assets.play2} alt="Play" />}
+                        </button>
+                        <button onClick={() => changeSong(1)}>
+                            <img src={assets.nn} alt="Next" />
+                        </button>
+                        <button
+                            onClick={() => {
+                                const shuffled = shuffleSongs(songs);
+                                setShuffledSongs(shuffled);
+                                setCurrentSongIndex(0);
+                            }}
+                        >
+                            <img src={assets.shuffle2} alt="Shuffle" />
+                        </button>
+                    </div>
                 </div>
 
-                </div>
-
-                
                 <div className="song-cover">
                     <img
                         src={shuffledSongs[currentSongIndex].cover}
@@ -120,8 +125,6 @@ const Player = () => {
                 </div>
             </div>
 
-
-            {/** Search bar */}
             <input
                 type="text"
                 placeholder="Search for a song..."
@@ -130,8 +133,6 @@ const Player = () => {
                 className="songs-search"
             />
 
-
-            {/* Song list */}
             <ul className="song-list">
                 <h3>All Songs</h3>
                 {filteredSongs.map((song, index) => (
@@ -139,7 +140,6 @@ const Player = () => {
                         key={index}
                         className={index === currentSongIndex ? 'active-song' : ''}
                     >
-                        {/*<img src={song.cover} alt={song.title} />*/}
                         <div
                             className="song-item"
                             onClick={() => handleSongClick(index)}
@@ -152,7 +152,7 @@ const Player = () => {
                         </div>
                         <button
                             onClick={() => addToPlaylist(song, currentPlaylist)}
-                            className='btn1'
+                            className="btn1"
                         >
                             Add to Playlist
                         </button>
@@ -160,7 +160,6 @@ const Player = () => {
                 ))}
             </ul>
 
-            {/** Playlist content */}
             <div className="playlists-container">
                 <h3>Playlists</h3>
                 <input
@@ -170,23 +169,17 @@ const Player = () => {
                     onChange={(e) => setPlaylistName(e.target.value)}
                 />
                 <button onClick={createPlaylist}>Create</button>
-                
+
                 <ul className="playlist-list">
                     {Object.keys(playlists).map((name) => (
                         <li key={name}>
                             <span
                                 onClick={() => setCurrentPlaylist(name)}
-                                className={
-                                    currentPlaylist === name
-                                        ? 'active-playlist'
-                                        : ''
-                                }
+                                className={currentPlaylist === name ? 'active-playlist' : ''}
                             >
                                 {name}
                             </span>
-                            <button onClick={() => deletePlaylist(name)}>
-                                Delete
-                            </button>
+                            <button onClick={() => deletePlaylist(name)}>Delete</button>
                         </li>
                     ))}
                 </ul>
@@ -203,9 +196,7 @@ const Player = () => {
                                     <div
                                         className="song-item"
                                         onClick={() => {
-                                            setCurrentSongIndex(
-                                                shuffledSongs.indexOf(song)
-                                            );
+                                            setCurrentSongIndex(shuffledSongs.indexOf(song));
                                             setIsPlaying(true);
                                         }}
                                     >
@@ -214,9 +205,7 @@ const Player = () => {
                                             alt={song.title}
                                             className="song-cover-thumbnail"
                                         />
-                                        <p className="song-title">
-                                            {song.title}
-                                        </p>
+                                        <p className="song-title">{song.title}</p>
                                         <p className="song-details">
                                             {song.artist} • {song.album} • {song.year}
                                         </p>
