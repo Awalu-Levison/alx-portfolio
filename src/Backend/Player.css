@@ -1,36 +1,25 @@
 /* General container styles */
 .player-container {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     padding: 15px;
-    max-width: 800px;
+    width: 70%;
     margin: 20px auto;
     border-radius: 20px;
     background-color: #071f4b;
-    box-shadow: #ff9900;
-    animation: fade-in 0.5s ease-in-out;
     position: relative;
     overflow: hidden;
-    /* Box shadow */
-    -webkit-box-shadow: -3px -2px 24px 2px rgba(0,0,0,1);
-    -moz-box-shadow: -3px -2px 24px 2px rgba(0,0,0,1);
-    box-shadow: -3px -2px 24px 2px rgba(0,0,0,1);
-  
+    box-shadow: -3px -2px 24px 2px rgba(0, 0, 0, 1);
+    animation: fade-in 0.5s ease-in-out;
 }
-
-
 
 /* Welcome heading */
 .welcome {
-    font-size: 48px;
+    font-size: 3rem;
     text-shadow: 2px 0px 2px #ff9900;
     text-align: center;
-    font-size: 2em;
     color: #ffffff;
     margin-bottom: 20px;
 }
-
-
-
 
 /* Player container */
 .player {
@@ -42,23 +31,19 @@
     background-color: transparent;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Song info */
 .song-info h2 {
     font-size: 1.5em;
     margin: 0;
     color: #ff9900;
-
 }
 
 .song-info p {
     font-size: 1em;
-    color: rgb(255, 255, 255);
-    /*color: #666;*/
-
+    color: #ffffff;
 }
 
 /* Controls */
@@ -68,40 +53,29 @@
     gap: 50px;
 }
 
-
-
 .song-controls button {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     border: none;
     cursor: pointer;
     background-color: transparent;
     border-radius: 50%;
-    gap: 20px;
-}
-
-
-
-
-/* Invert colours
-/* Invert colors to make black icons white */
-*/
-.song-controls img {
-    filter: invert(1);
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .song-controls button:hover {
     background-color: #ff9900;
-    transform: scale(0.8);
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.7), 0 0 30px rgba(255, 153, 0, 0.5);
 }
 
 .song-controls img {
     width: 30px;
     height: 30px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
-
-
-
 
 /* Main song cover */
 .song-cover img {
@@ -111,27 +85,22 @@
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-
 
 /* Search bar */
 .songs-search {
     width: 100%;
     padding: 10px;
     border: 2px solid #ffffff;
-    /*border: 2px solid #ff9900;*/
     border-radius: 20px;
     margin-top: 10px;
     outline: none;
     transition: box-shadow 0.3s;
 }
 
-
-
 .songs-search:focus {
-    box-shadow: 0px 0px 10px rgba(255, 153, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
 }
 
 /* Song list */
@@ -141,35 +110,24 @@
     margin: 20px 0;
 }
 
-
-
 .song-list li {
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 10px;
-    /*border-bottom: 1px solid #eee;*/
     border-bottom: 2px solid #ffffff;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-
-/* Music hover colour */
 .song-list li:hover {
     background-color: #534d4d;
-    /*background-color: #e7e7e7;*/
-
-
+    cursor: pointer;
 }
-
-
 
 .song-title {
     font-weight: bold;
     color: #ff9900;
-    /*color: #333;*/
-
 }
 
 .song-details {
@@ -182,11 +140,6 @@
     color: #000000;
     background-color: #999999;
     border-radius: 10px;
-    /*background-color: #999999;
-    color: #000000;
-
-    */
-
 }
 
 /* Playlist container */
@@ -194,13 +147,9 @@
     margin-top: 20px;
 }
 
-
 .playlists-container input {
     width: calc(100% - 20px);
     padding: 10px;
-    /* 
-    border: 2px solid #ddd;
-    */
     border-radius: 20px;
     margin-bottom: 10px;
 }
@@ -208,18 +157,33 @@
 .playlists-container button {
     padding: 5px 15px;
     background-color: #ff9900;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .playlists-container button:hover {
     background-color: #000000;
-    /*ackground-color: #e68a00;*/
-
 }
+
+/* Playlist styles */
+.playlist-list span {
+    color: #add8e6;
+    background-color: #f0f8ff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.playlist-list span:hover {
+    background-color: #87cefa;
+    color: #ffffff;
+}
+
+
 
 /* Animations */
 @keyframes fade-in {
