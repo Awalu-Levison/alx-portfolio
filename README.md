@@ -22,11 +22,14 @@ This project is a **Music Streaming Web App**, developed as part of my portfolio
 - **Music Player:** Basic music playback functionality, including play, pause, and skip.
 - **User Profiles:** Personalized accounts for tracking playlists and favorites.
 - **Playlist Management:** Users are able to create and delete playlists. Add songs to playlist and playsongs from them.
+- **Search Functionality:** A search bar to locate songs and artists more easily.
+
 
 
 ### Features in Progress:
-- **Search Functionality:** A search bar to locate songs and artists more easily.
 - **Responsive Design:** The app adjusts seamlessly across desktop and mobile devices.
+- **Social Community:** This is where users will be able to see what others are playing on the platform.
+
 
 
 ---
