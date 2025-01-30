@@ -7,7 +7,8 @@ import SignUp from './components/SignUp/SignUp';
 import Home from './pages/Home/Home';
 import Player from './Backend/Player';
 import ProtectedRoute from './Backend/ProtectedRoute';
-
+import Terms from './components/Terms/Terms';
+import PrivacyPolicy from './components/Privacy Policy/PrivacyPolicy';
 
 
 const App = () => {
@@ -27,6 +28,8 @@ return (
         <Route path='/player' element={isLoggedIn ? <Player /> : <Navigate to='/player' />} />
         <Route path="/" element={user ? <Navigate to="/player" /> : <Home />} />
         <Route path="/player" element={ <ProtectedRoute> <Player /> </ProtectedRoute>} /> 
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
         </div>
     </>

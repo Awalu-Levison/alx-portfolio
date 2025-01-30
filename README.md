@@ -31,8 +31,6 @@ This project is a **Music Streaming Web App**, developed as part of my portfolio
 - **Playlist Management:** Users are able to create and delete playlists. Add songs to playlist and playsongs from them.
 
 
-
-
 ---
 
 ## Running the Project Locally
@@ -66,9 +64,8 @@ Since an API has not yet been integrated, the app currently operates without bac
 
 ---
 
-## Known Limitations
-- No backend/API integration currently exists, so data persistence and advanced features are unavailable.
-- Some features listed in "Features in Progress" are placeholders for future functionality.
+## Handle User Data
+For now I’m only working with limited number of users hence I decided to implement local storage as a means of saving and retrieving users data. As time goes on and users increases I intend to use Mongoose database to enable real time data
 
 ---
 
@@ -81,6 +78,7 @@ Since an API has not yet been integrated, the app currently operates without bac
 
 ## Feedback
 If you have suggestions for improvements or encounter any issues, please feel free to reach out. I am open to mentorship and constructive feedback to refine this project.
+
 
 ## Team members
 Awalu Levison <Frontend Engineer>
