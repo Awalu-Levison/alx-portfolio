@@ -19,8 +19,8 @@ export default function Explore() {
       </pre>
     </div>
   ) : (
-    <div id="default-content">
-      <h3>Welcome to Explore</h3>
+    <div className="default-info" id="default-content">
+      <h3>Genre description goes here</h3>
       <p>Select a genre to dive into the world of music you love.</p>
       <img src="/assets/default_music.png" alt="Default Music" className="default-image" />
     </div>
