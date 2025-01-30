@@ -1,7 +1,9 @@
-/* eslint-disable no-unused-vars */
+ 
+ /* eslint-disable no-unused-vars */
 import React from 'react';
 import './Header.css';
 import { assets } from '../../assets/assets'; // Import assets
+
 
 const Header = () => {
   const { header_img } = assets; // Destructure the image you want
@@ -26,7 +28,7 @@ const Header = () => {
         <p>Discover {description} music you love, curated just for you.</p>
         <div className="discover">
           <a href="#explore_set">Explore</a>
-          <a href="">
+          <a href="" >
             Sign up <span>&#x27f6;</span>
           </a>
           <span>
