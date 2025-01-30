@@ -1,49 +1,121 @@
 .footer-session {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #282c34;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 7px 5%;
+  font-family: Poppins;
+
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h3, h4 {
+  margin: 10px 0;
+  color: #61dafb;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+ul li svg {
+  margin-right: 8px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #21a1f1;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: #61dafb;
+}
+
+.footer p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #222;
+}
+
+.footer-social a {
+  color: #61dafb;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #21a1f1;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+  color: #ffffff;
+  font-size: 0.85em;
+}
+
+.footer-copyright p {
   
-  .footer-section {
-    flex: 1;
-    margin: 0 10px;
-  }
-  
-  .footer-logo {
-    width: 50px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  h3, h4 {
-    margin: 10px 0;
-    color: #61dafb;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul li {
-    margin: 5px 0;
-  }
-  
-  ul li a {
-    text-decoration: none;
-    color: #61dafb;
-    transition: color 0.3s;
-  }
-  
-  ul li a:hover {
-    color: #21a1f1;
-  }
-  
-  .footer p {
-    font-size: 0.9em;
-    margin: 5px 0;
-  }
-  
+  color: #fff !important;
+}
+
+
+
+.newsletter input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.newsletter button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #61dafb;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter p {
+  color: rgb(255, 255, 255) !important; 
+}
+
+
+
+.newsletter button:hover {
+  background-color: #21a1f1;
+}
+
+.footer-section.company-info p {
+  color: #fff !important;
+}
