@@ -36,8 +36,8 @@
 /* Hover effect for links */
 .navbar-menu a:hover,
 .navbar-menu Link:hover {
-    color: #DAA520; /* Highlight color on hover */
-    border-bottom: 2px solid #DAA520; /* Underline on hover */
+    color: #DAA520;
+    border-bottom: 2px solid #DAA520;
 }
 
 /* Icons styling */
@@ -55,7 +55,7 @@
 
 /* User menu styles */
 .user-menu button {
-    position: fixed;
+    position: relative;
     display: flex;
     align-items: center;
     color: #ffffff;
