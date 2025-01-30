@@ -21,7 +21,6 @@ This project is a **Music Streaming Web App**, developed as part of my portfolio
 - **Home Page:** Displays the app's main interface, highlighting featured tracks and playlists.
 - **Music Player:** Basic music playback functionality, including play, pause, and skip.
 - **User Profiles:** Personalized accounts for tracking playlists and favorites.
-- **Playlist Management:** Users are able to create and delete playlists. Add songs to playlist and playsongs from them.
 - **Search Functionality:** A search bar to locate songs and artists more easily.
 
 
@@ -29,6 +28,8 @@ This project is a **Music Streaming Web App**, developed as part of my portfolio
 ### Features in Progress:
 - **Responsive Design:** The app adjusts seamlessly across desktop and mobile devices.
 - **Social Community:** This is where users will be able to see what others are playing on the platform.
+- **Playlist Management:** Users are able to create and delete playlists. Add songs to playlist and playsongs from them.
+
 
 
 
@@ -44,11 +45,11 @@ Since an API has not yet been integrated, the app currently operates without bac
 ### Steps:
 1. Clone the repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Awalu-Levison/alx-portfolio.git
    ```
 2. Navigate into the project directory:
    ```bash
-   cd <project-directory>
+   cd alx-portfolio
    ```
 3. Install the required dependencies:
    ```bash
