@@ -22,13 +22,17 @@ const AboutUs = () => {
   };
 
   return (
+    <>
     <div className="about-session" id="about_set">
       <header className="about-us-header">
         <h1>About Us</h1>
         <p>Connecting the world through the power of music.</p>
       </header>
 
+
+      {/* About us content */}
       <div className="about-us-content">
+
         <section className="about-section">
           <img src={assets.p2} alt="Our Aim" className="section-image" />
           <div className="text-content">
@@ -45,6 +49,7 @@ const AboutUs = () => {
             </ul>
           </div>
         </section>
+        
 
         <section className="about-section">
           <img src={assets.headset1} alt="Our Mission" className="section-image" />
@@ -107,6 +112,8 @@ const AboutUs = () => {
         </form>
       </section>
     </div>
+    </>
+    
   );
 };
 
