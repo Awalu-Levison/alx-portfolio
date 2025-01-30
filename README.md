@@ -81,6 +81,6 @@ If you have suggestions for improvements or encounter any issues, please feel fr
 
 
 ## Team members
-Awalu Levison <Frontend Engineer>
-Email: <levisonawalu251@gmail.com>
+- Awalu Levison (Frontend Engineer)
+- Email: <levisonawalu251@gmail.com>
 
