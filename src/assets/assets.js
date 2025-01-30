@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
+ 
 import logo from './logo.png'
 import delete_icon from './delete_icon.png'
 import user_icon from './user_icon.png'
@@ -17,6 +17,18 @@ import reggae from './reggae.png'
 import jazz from './jazz.png'
 import dancehall from './dancehall.png'
 import radio from './radio.png'
+import user_icon2 from './user_icon2.png'
+import play from './play.png'
+import pause from './pause.png'
+import nn from './nn.png'
+import bac from './bac.png'
+import play1 from './play1.png'
+import pause1 from './pause1.png'
+import pause2 from './pause2.png'
+import shuffle2 from './shuffle2.png'
+import play2 from './play2.png'
+
+
 
 
 export const assets = {
@@ -36,7 +48,17 @@ export const assets = {
     reggae,
     jazz,
     dancehall,
-    radio
+    radio,
+    user_icon2,
+    play,
+    pause,
+    nn,
+    bac,
+    play1,
+    pause1,
+    pause2,
+    shuffle2,
+    play2
 
 }
 
