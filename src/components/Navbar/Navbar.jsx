@@ -49,7 +49,7 @@ const Navbar = ({ setShowLogin }) => {
           <div className="user-menu">
             {isLoggedIn ? (
               <div>
-                <img src={assets.user_icon} alt='User' onClick={toggleDropdown} className="icon user-icon" />
+                <img src={assets.user_icon2} alt='User' onClick={toggleDropdown} className="icon user-icon" />
                 {dropdownOpen && (
                   <div className='dropdown-menu'>
                     <button onClick={handleLogout}>Logout</button>
@@ -57,9 +57,10 @@ const Navbar = ({ setShowLogin }) => {
                 )}
               </div>
             ) : (
-              <button onClick={() => setShowLogin(true)}>Login</button>
+              <button onClick={() => setShowLogin(true)}> Sign in </button>
             )}
           </div>
+          
         </ul>
       </div>
     </div>
@@ -68,5 +69,3 @@ const Navbar = ({ setShowLogin }) => {
 }
 
 export default Navbar
-
-/*to conect the nav add an ID to the explore div component and do it for all */
