@@ -7,11 +7,12 @@
     display: grid;
 }
 
+
 .sign-up-container{
     place-self: center;
     width: max(23vw,330px);
     color: rgb(4, 28, 4);
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -21,22 +22,32 @@
     animation: fadeIn 0.5s;
 }
 
-.sign-up-titile{
+
+.sign-up-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black;
 }
-.sign-up-titile img{
+
+
+.sign-up-title h2 {
+    color: rgb(0, 0, 0) !important;
+}
+
+
+.sign-up-title img{
     width: 16px;
     cursor: pointer;
 }
+
 
 .sign-up-input{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
+
 .sign-up-input input{
     outline: none;
     border: 1px solid #DAA520;
@@ -54,14 +65,16 @@
     font-size: 15px;
     cursor: pointer;
 }
-.sign-up-condiction{
+
+
+.sign-up-condition{
     display: flex;
     align-items: start;
     gap: 8px;
     margin-top: -15px;
 }
 
-.sign-up-condiction input{
+.sign-up-condition input{
     margin-top: 5px;
 }
 
