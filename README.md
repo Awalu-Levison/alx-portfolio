@@ -84,3 +84,6 @@ If you have suggestions for improvements or encounter any issues, please feel fr
 - Awalu Levison (Frontend Engineer)
 - Email: <levisonawalu251@gmail.com> 
 
+## Project Status
+- Project in progress
+
