@@ -85,5 +85,5 @@ If you have suggestions for improvements or encounter any issues, please feel fr
 - Email: <levisonawalu251@gmail.com> 
 
 ## Project Status
-- Project in progress
+- Project is in progress
 
